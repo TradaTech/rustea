@@ -1,0 +1,21 @@
+[package]
+name = "erc20"
+version = "0.1.0"
+authors = ["The wasm-bindgen Developers"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+icetea_wasm = { path = "./icetea_wasm" }
+serde = "1.0.88"
+serde_derive = "1.0.88"
+console_error_panic_hook = "0.1.6"
+js-sys = "0.3.14"
+futures = "0.1.25"
+wasm-bindgen-futures = "0.3.14"
+
+[dependencies.wasm-bindgen]
+version = "0.2.37"
+features = ["serde-serialize"]
