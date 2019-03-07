@@ -1,1 +1,1 @@
-const rust = import("./pkg/erc20");
+const rust = import("./pkg/hello_world");
