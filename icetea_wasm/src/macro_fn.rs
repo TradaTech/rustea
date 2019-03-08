@@ -25,6 +25,7 @@ macro_rules! save {
   ( u32, $key:expr, $value:expr ) => {{ save($key, &Value::from_u32($value)); }};
   ( String, $key:expr, $value:expr ) => {{ save($key, &Value::from_str(&$value)); }};
   ( bool, $key:expr, $value:expr ) => {{ save($key, &Value::from_bool($value)); }};
+  ( $key:expr, $value:expr ) => {{ save($key, &$value.to_value()); }};
 }
 
 #[macro_export]
