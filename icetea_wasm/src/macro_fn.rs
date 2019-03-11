@@ -12,6 +12,7 @@ macro_rules! require {
 #[macro_export]
 macro_rules! load {
   (u128,$key:expr) => {{ load($key).as_u128().unwrap() }};
+  (u64,$key:expr) => {{ load($key).as_u64().unwrap() }};
   (f64,$key:expr) => {{ load($key).as_f64().unwrap() }};
   (u32,$key:expr) => {{ load($key).as_u32().unwrap() }};
   (bool,$key:expr) => {{ load($key).as_bool().unwrap() }};
@@ -21,6 +22,7 @@ macro_rules! load {
 #[macro_export]
 macro_rules! save {
   ( u128, $key:expr, $value:expr ) => {{ save($key, &Value::from_u128($value)); }};
+  ( u64, $key:expr, $value:expr ) => {{ save($key, &Value::from_u64($value)); }};
   ( f64, $key:expr, $value:expr ) => {{ save($key, &Value::from_f64($value)); }};
   ( u32, $key:expr, $value:expr ) => {{ save($key, &Value::from_u32($value)); }};
   ( String, $key:expr, $value:expr ) => {{ save($key, &Value::from_str(&$value)); }};
