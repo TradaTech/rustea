@@ -1,5 +1,7 @@
 # sample-token
 
+This sample is a ERC20-like token written in Rust for [icetea](https://github.com/TradaTech/icetea) platform.
+
 ### Note
 * Install rust first (1.34.0-nightly or later)
 * Do not modify `name` in [package] section in Cargo.toml
