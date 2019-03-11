@@ -11,12 +11,12 @@ macro_rules! require {
 
 #[macro_export]
 macro_rules! load {
-  (u128,$key:expr) => {{ load($key).as_u128().unwrap() }};
-  (u64,$key:expr) => {{ load($key).as_u64().unwrap() }};
-  (f64,$key:expr) => {{ load($key).as_f64().unwrap() }};
-  (u32,$key:expr) => {{ load($key).as_u32().unwrap() }};
-  (bool,$key:expr) => {{ load($key).as_bool().unwrap() }};
-  (String,$key:expr) => {{ load($key).as_string().unwrap() }};
+  (u128,$key:expr) => {{ match load($key).as_u128() { Some(value) => value, None => 0 } }};
+  (u64,$key:expr) => {{ match load($key).as_u64() { Some(value) => value, None => 0 } }};
+  (f64,$key:expr) => {{ match load($key).as_f64() { Some(value) => value, None => 0.0 } }};
+  (u32,$key:expr) => {{ match load($key).as_u32() { Some(value) => value, None => 0 } }};
+  (bool,$key:expr) => {{ match load($key).as_bool() { Some(value) => value, None => false } }};
+  (String,$key:expr) => {{ match load($key).as_string() { Some(value) => value, None => String::from("") } }};
 }
 
 #[macro_export]
