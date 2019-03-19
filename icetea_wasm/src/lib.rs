@@ -56,6 +56,12 @@ impl ToValue for bool {
   }
 }
 
+impl ToValue for String {
+  fn to_value(&self) -> Value {
+    Value::from_str(&self)
+  }
+}
+
 pub trait ToValueLifetime<'a> {
   fn to_value(&'a self) -> Value;
 }

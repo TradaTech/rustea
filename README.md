@@ -37,7 +37,8 @@ extern {
   fn emit_event(name: &str, data: &Value, indexes: &Value); // emit event
   fn load(key: &str) -> Value; // load value from state store
   fn save(key: &str, value: &Value); // create or update value in state store
-  fn call_contract(address: &str, method: &str, params: js_sys::Array) -> JsValue; // call method from remote contract
+  fn read_contract(address: &str, method: &str, params: Array) -> Value; // read method from remote contract
+  fn write_contract(address: &str, method: &str, params: Array) -> Value; // write method from remote contract
 }
 ```
 
