@@ -1,14 +1,17 @@
 {
-  "scripts": {
-    "build": "webpack",
-    "serve": "webpack-dev-server"
+  "name": "rustea",
+  "version": "1.0.0",
+  "description": "This sample is a ERC20-like token written in Rust for [icetea](https://github.com/TradaTech/icetea) platform.",
+  "main": "deploy.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brittle-box/rustea.git"
   },
-  "devDependencies": {
-    "@wasm-tool/wasm-pack-plugin": "0.2.1",
-    "text-encoding": "0.7.0",
-    "html-webpack-plugin": "3.2.0",
-    "webpack": "4.29.4",
-    "webpack-cli": "3.1.1",
-    "webpack-dev-server": "3.1.11"
-  }
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brittle-box/rustea/issues"
+  },
+  "homepage": "https://github.com/brittle-box/rustea#readme"
 }

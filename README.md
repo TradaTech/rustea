@@ -2,24 +2,29 @@
 
 This sample is a ERC20-like token written in Rust for [icetea](https://github.com/TradaTech/icetea) platform.
 
-### Note
-* Install rust first (1.34.0-nightly or later)
-* Do not modify `name` in [package] section in Cargo.toml
-
 ### Command
+#### Install Rust and Cargo
 ```bash
-$ npm i
-$ npm run build
+$ curl https://sh.rustup.rs | sh -s -- -y
+$ export PATH=$PATH:$HOME/.cargo/bin
+$ rustup target add wasm32-unknown-unknown
+$ cargo install wasm-bindgen-cli --vers 0.2.37
+$ cargo install wasm-gc
+```
+
+#### Build
+```bash
+$ npm install -g https://github.com/TradaTech/brittle
+$ brittle build
 ```
 
 ### Directory
 ```
 project
-└───icetea_wasm <-- library
 └───src
-│   │   lib.rs  <-- your source here
+│   │   erc20.rs  <-- your source here
 └───pkg
-    │   hello_world_bg.wasm <-- your wasm file here
+    │   erc20.wasm <-- your wasm file here
 ```
 
 ### Source explain

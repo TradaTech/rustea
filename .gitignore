@@ -3,7 +3,5 @@ node_modules
 
 **/*.rs.bk
 Cargo.lock
-dist
 pkg
 target
-.env

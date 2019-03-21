@@ -5,10 +5,10 @@ authors = ["The wasm-bindgen Developers"]
 edition = "2018"
 
 [lib]
-crate-type = ["cdylib"]
+path = "utils/blank.rs"
 
 [dependencies]
-icetea_wasm = { path = "./icetea_wasm" }
+icetea_wasm = { git = "https://github.com/TradaTech/icetea-wasm" }
 serde = "1.0.88"
 serde_derive = "1.0.88"
 console_error_panic_hook = "0.1.6"
